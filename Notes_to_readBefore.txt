@@ -1,0 +1,29 @@
+1. search for markdown tutorial (read it)
+2. NumPy type reference
+3. array creation methods in numpy
+4. lspace = np.linspace(1,50,12) => it will give 12 val in between 1 to 50
+5. np.empty((4,5)) 4col 6 row er empty array debe with random val
+6. arr = np.arange(99) 
+ then arr.reshape(3,33) => 3*33 = 99 valid
+it will give 3 col 33 row
+7. arr.reval() it will turn array into 1D
+8. arr.sum(axis=0) (1st col er sum, 2nd col sum, 3rd col sum....)(go down)[axis start with zero=0]
+9. arr.sum(axis=1) (1st row sum, 2nd row sum, 3rd row sum....)(go right)
+10. ar.T => transpose a matrix
+11. to operate operation in a array i. arr.flat ii. for item in arr.flat: iii. do operation
+12. flat → gives an iterator to go through elements
+13. arr.flatter() 1D array banai with all elements
+14. arr.ndim => give the dimension val
+15. how much byte the array taken => arr.nbytes
+16. arr.argmax() => max ele er index
+17. which one argument vs which one value
+18. arr.argsort() => index wise sort not the element, it will show sorted index
+19. arr.argmax() in 2D => 1st oneline e sob element palin koira then index ret korbe max er
+20. arr.argsort() in 2D => col wise index sorted
+21. we can do matrix operation here
+22.np.where(arr.condition) 
+23. np.count_nonzero(arr) => non zero element numbers
+24. np.nonzero(arr) =>arr te non zero ele er index show
+25. arr.itemsize = 1 element koto byte
+26. search array method and attributes then docs.skypy theke attributes read
+27. arr.tolist() => array list

@@ -1,0 +1,45 @@
+Pandas
+01. why use pandas?
+02. to modify a cell in notebook while the excel file already existing:
+	i. create a new dataFrame using t1 = pd.read_csv("file.csv")
+	ii.then t1[index,"col name"] or t1.loc[index,col_name]
+here two things:
+	i. t2.loc[2, "Result"] = 4.00   # label দিয়ে mean col name wise so use loc
+	ii. t2.iloc[2, 2] = 4.00         # position দিয়ে mane indexing
+	iii. t2.loc[0,0] = 65 //here if any col named 0 not exist then it will create 0 col named one and o index = the 	     val and other below col filled with "NaN"
+
+03. the copy method: S
+	i.t1 = t → same DataFrame(changing the t1 will change t also)
+	ii.t1 = t.copy() → new DataFrame (two diff no affect)
+
+04. i want to see some specific coloum then,
+	i. dataFrame.head(no_of_col_uwanna_see_from_1st)
+	ii. dataFrame.tail(no_of_col_uwanna_see_from_last)
+	iii. dataFrame.head() => all colms
+
+05. dataFtame.colomins= list("The col name i want to see")  	=>("ABCD")
+	then it will show col name like: A|	B|	C|	D|
+	eg: t2.columns = list(["Roll", "Student_Name", "Result", "Address"])
+
+06. Droping:
+	i. dataFrame.drop(0) => 0 indexing coloumn drop korbe
+	ii. dataFrame.drop("Address",axis=1) => Adress wala row dropped
+	eg: t2.drop(columns="Result")   # remove column
+	    t2.drop(index=2)            # remove row
+
+07. to show some specific cell:
+	i. dataFrame.loc[[1,2],["result","roll"]] =>result & roll er 1,2 index row show
+	ii. dataFrame.loc[[1,2,3], :] => will show all rows of 1,2,3 index
+
+
+08. Query:
+	i. DataFrame.loc[(DataFrame[col_name]>0.03_valueTochk)]
+	ii.
+SS
+09. Search for "how to drop null from pandas df" then 1st one read
+10. Search for "how to drop duplicate from pandas df"
+11. To remove duplicates:
+	i. t2.drop_duplicates(subset = ['Result'], keep= False)
+	ii.
+12. to save a table from notebook to excel sheet:
+	i. dataFrame.to_excel('dataFrame.xlsx', sheet_name='Sheet2')
